@@ -3,7 +3,7 @@ import history from '../history';
 class Nodes extends Component {
     state={node:[]};
     componentDidMount() {
-        fetch(`${document.location.origin}/api/know-address`)
+        fetch(`${document.location.origin}/api/known-addresses`)
           .then(response => response.json())
           .then(json => this.setState({ node: json }));
       }
