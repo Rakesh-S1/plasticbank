@@ -21,7 +21,6 @@ class App extends Component {
                 </div>
                 <br />
                 <div className='wallet-info'>
-                <div className='wall1'><span><b>Wallet Id:</b> {WalletId}</span></div>
                 <div className='wall2'><span><b>Address:</b> {address}</span></div>
                 <div className='wall3'><span><b>Balance:</b> {balance}</span></div>
                 </div>
