@@ -100,9 +100,9 @@ app.get('/api/mine-transactions', (req, res) => {
 
 app.get('/api/wallet-info', (req, res) => {
   const address = wallet.publicKey;
-  temp1=node_list(address);
+  const walletId=wallet.walletId
   res.json({
-    temp1,
+    walletId,
     address,
     balance: Wallet.calculateBalance({ chain: blockchain.chain, address })
   });
