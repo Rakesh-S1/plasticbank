@@ -7,6 +7,7 @@ const PubSub = require('./app/pubsub');
 const TransactionPool = require('./wallet/transaction-pool');
 const Wallet = require('./wallet');
 const TransactionMiner = require('./app/transaction-miner');
+const node_list=require('./util/nodes');
 
 const isDevelopment = process.env.ENV === 'development';
 
@@ -99,8 +100,9 @@ app.get('/api/mine-transactions', (req, res) => {
 
 app.get('/api/wallet-info', (req, res) => {
   const address = wallet.publicKey;
-
+  temp1=node_list(address);
   res.json({
+    temp1,
     address,
     balance: Wallet.calculateBalance({ chain: blockchain.chain, address })
   });
