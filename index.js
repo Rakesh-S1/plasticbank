@@ -15,7 +15,9 @@ const REDIS_URL = isDevelopment ?
   'redis://127.0.0.1:6379' :
   'redis://:p89b225729606125f8f146035a8b398df1c32f112bf239d8a9080874584046f99@ec2-23-20-105-73.compute-1.amazonaws.com:13229'
   const DEFAULT_PORT = 3000;
-const ROOT_NODE_ADDRESS = `http://localhost:${DEFAULT_PORT}`;
+const ROOT_NODE_ADDRESS = isDevelopment ?
+  `http://localhost:${DEFAULT_PORT}` :
+  'https://plasticbank.herokuapp.com';
 
 const app = express();
 const blockchain = new Blockchain();
