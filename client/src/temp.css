@@ -251,7 +251,6 @@ box-sizing: border-box;
 body, html {
 height: 100%;
 font-family: inter, Helvetica, sans-serif;
-cursor:url('./cursor/d_pointer.cur'),auto;
 
 }
 
@@ -1115,7 +1114,7 @@ padding-top: 15%;
   margin-left:3%;
   height: 80%;
   display:inline-block;
-  width:80;
+  width:100;
   
   
 
