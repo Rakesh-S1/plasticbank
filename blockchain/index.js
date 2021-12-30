@@ -63,7 +63,7 @@ class Blockchain {
             console.error('Invalid transaction');
             return false;
           }
-
+          /*
           const trueBalance = Wallet.calculateBalance({
             chain: this.chain,
             address: transaction.input.address
@@ -72,7 +72,7 @@ class Blockchain {
           if (transaction.input.amount !== trueBalance) {
             console.error('Invalid input amount');
             return false;
-          }
+          }*/
 
           if (transactionSet.has(transaction)) {
             console.error('An identical transaction appears more than once in the block');
